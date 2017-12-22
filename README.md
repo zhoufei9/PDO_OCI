@@ -76,4 +76,4 @@ PDO_OCI-1.0/php_pdo_oci_int.h:21:17: error: oci.h: No <br/>
 编译时报/usr/bin/ld: cannot find -lclntsh <br/>
 原因：环境变量设置,没找到ORACLE下的libclntsh.so文件<br/>
 解决办法：检查环境变量，看ORACLE有关的环境变量是否设置正确<br/>
-我本地是libclntsh.so.11.1 没有 加一个软连接  ln -s libclntsh.so.11.1 libclntsh.so就好了<br/>
+我本地是libclntsh.so.11.1，没有libclntsh.so。 加一个软连接指向就好了  ln -s libclntsh.so.11.1 libclntsh.so<br/>
