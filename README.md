@@ -1,12 +1,18 @@
 # PDO_OCI && OCI8-install
 #安装PDO_OCI <br/>
+我的php版本为5.6.30，要连接的oracle服务器是 11g R2，操作系统版本CentOS 6.9 x86_64 <br/>
+PDO_OCI官方说明<br/>
+You need to install the PDO core module before you can make use of this one.<br/>
+You also require Oracle OCI 8 or higher client libraries installed on the<br/>
+machine where you intend to build and/or use it.<br/><br/>
+
 下载并解压缩  <br/>
 $ wget https://pecl.php.net/get/PDO_OCI-1.0.tgz <br/>
 $ tar -xvf PDO_OCI-1.0.tgz <br/>
 $ cd PDO_OCI-1.0 <br/><br/>
 
 修改配置文件 <br/>
-更新目录中的config.m4文件，使其适配Oracle11g <br/>
+更新目录中的config.m4文件，使其适配Oracle11g （我装的oracle服务器是 11g R2）<br/>
 在第10行左右找到与下面类似的代码，添加这两行：（注：11.2是下载的版本号instantclient11.2） <br/>
 elif test -f $PDO_OCI_DIR/lib/libclntsh.$SHLIB_SUFFIX_NAME.11.2; then <br/>
  PDO_OCI_VERSION=11.2 <br/><br/>
@@ -33,7 +39,7 @@ pdo_oci.c:34: error: expected ‘=', ‘,', ‘;', ‘asm' or ‘attribute' befo
 到这里，pdo_oci模块就安装完成了<br/><br/><br/>
 
 
------------------------------------------------fengexian---------------------------------------------------------------------<br/>
+-----------------------------------------------hualifengexian--------------------------------------------------------<br/>
 安装OCI8<br/>
 下载并解压缩<br/>
 依次在命令行中执行下面的命令:<br/>
